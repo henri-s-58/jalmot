@@ -1,5 +1,7 @@
 package jalmot
 
+import "fmt"
+
 type Jalmot interface {
 	error
 	From() Location
@@ -8,6 +10,13 @@ type Jalmot interface {
 func New(message string) Jalmot {
 	return &impl{
 		message:  message,
+		location: newLocation(2),
+	}
+}
+
+func Newf(format string, args ...interface{}) Jalmot {
+	return &impl{
+		message:  fmt.Sprintf(format, args...),
 		location: newLocation(2),
 	}
 }

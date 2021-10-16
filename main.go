@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	var err error = jalmot.New("jalmot is super error")
+	var err error = jalmot.Newf("jalmot is super %s. made by: %s", "error", "henri-s-58")
 	log.Println("err:", err)
 	log.Println("err location:", jalmot.TakeLocation(err))
 	os.Exit(0)
