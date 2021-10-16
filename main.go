@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/jalmot/v1"
+	"github.com/henri-s-58/jalmot/v1"
 )
 
 func main() {
